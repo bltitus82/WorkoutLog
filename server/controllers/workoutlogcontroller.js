@@ -54,15 +54,15 @@ router.get("/mine", validateJWT, async (req, res) => {
 
 // Update a Workout Log Entry
 
-router.put("/update/:logId", validateJWT, async (req, res) => {
+router.put("/:id", validateJWT, async (req, res) => {
     const { description, definition, result } = req.body.workoutLog;
-    const logId = req.params.log;
+    const logId = req.params.id;
     const userId = req.user.id;
 
     const query = {
         where: {
             id: logId,
-            owner: userId
+            owner_id: userId
         }
     };
 
@@ -82,7 +82,7 @@ router.put("/update/:logId", validateJWT, async (req, res) => {
 
 // Delete a Workout Log Entry
 
-router.delete("/delete/:id", validateJWT, async (req, res) => {
+router.delete("/:id", validateJWT, async (req, res) => {
     const ownerId = req.user.id;
     const workoutId = req.params.id;
 
@@ -90,7 +90,7 @@ router.delete("/delete/:id", validateJWT, async (req, res) => {
         const query = {
             where: {
                 id: workoutId,
-                owner: ownerId
+                owner_id: ownerId
             }
         };
 
