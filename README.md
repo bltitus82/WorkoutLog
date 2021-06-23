@@ -9,5 +9,5 @@ This README file exists primarily to include screen shots to show my endpoints w
 ![Create a new workout log](https://github.com/bltitus82/WorkoutLog/blob/main/server/assets/createWorkoutLog.png)
 ![user Login](https://github.com/bltitus82/WorkoutLog/blob/main/server/assets/userLogin.png)
 ![Workout Logs by ID](https://github.com/bltitus82/WorkoutLog/blob/main/server/assets/workoutLogsById.png)
-![Update a log]
-![Delete a log]
+![Update a log](https://github.com/bltitus82/WorkoutLog/blob/main/server/assets/updateLog.png)
+![Delete a log](https://github.com/bltitus82/WorkoutLog/blob/main/server/assets/deleteLog.png)
