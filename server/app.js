@@ -3,10 +3,12 @@ const Express = require("express");
 const app = Express();
 const dbConnection = require("./db");
 
+
 const controllers = require("./controllers");
 
 app.use(Express.json());
-res.header('access-control-allow-origin', '*');
+app.use(require('./middleware/headers'));
+// res.header('access-control-allow-origin', '*');
 app.use('/user', controllers.userController);
 
 // app.use(require("./middleware/validate-jwt"));
